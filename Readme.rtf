@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ri-340\partightenfactor0
+
+\f0\fs24 \cf0 Scope of work:\
+\pard\pardeftab720\li720\fi-360\ri-340\partightenfactor0
+\ls1\ilvl0\cf0 1.	Take the device specific information from the user such as IP address, username, password.\
+2.	Identify the device type\
+3.	Take the backup of the device and confirm the status to a user.\
+4.	Create a device specific folder, and store the backup file in that folder. And file name should be a management address of a device.\
+5.	Take the confirmation from the user if management interface needs to be checked.\
+6.	If management interface is down, bring it up and confirm the user.\
+\pard\pardeftab720\ri-340\partightenfactor0
+\cf0 \
+Solution:\
+\pard\pardeftab720\li360\ri-340\partightenfactor0
+\cf0 This project is created in python3 and we have used netmiko as a main library for login into the devices. We used a netmiko module i.e. auto detect to identity the device type.\
+Once device is identified we used the netmiko connection handler function to login into the device and run the specific  command to fetch the configuration from the device. This information is stored in the variables which is then passed to file function for naming the file and for creating a device backup file on a pre-defined path. We have used OS library to interact the server for creation of folders where actually a backup file resides. \
+At the end we have created a management interface check function which will review the user input and perform the necessary steps to bring the management interface UP.\
+}
